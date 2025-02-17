@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ### Bước 4: Chạy dự án
 #### 1. Huấn luyện mô hình: Nếu bạn muốn huấn luyện mô hình, chạy tệp train_model.py.
 ```bash
-python model_train_data/main.py
+python scripts/train_model.py
 ```
 #### 2. Chạy ứng dụng Streamlit: Để triển khai giao diện web, sử dụng lệnh sau:
 ```bash
@@ -81,6 +81,7 @@ streamlit run app.py
 ├── streamlit_app/         # Thư mục Streamlit
 │   └── app.py             # Mã nguồn Streamlit
 ├── requirements.txt       # Các thư viện yêu cầu
+├── .gitignore             # Các thư mục không up lên github
 └── README.md              # Tệp README
 ```
 # Các Phần Chính Của Dự Án
