@@ -81,6 +81,7 @@ streamlit run app.py
 ├── streamlit_app/         # Thư mục Streamlit
 │   └── app.py             # Mã nguồn Streamlit
 ├── requirements.txt       # Các thư viện yêu cầu
+├── .gitignore             # Các thư mục không up lên github
 └── README.md              # Tệp README
 ```
 # Các Phần Chính Của Dự Án
