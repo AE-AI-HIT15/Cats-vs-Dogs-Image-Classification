@@ -85,9 +85,10 @@ streamlit run app.py
 └── README.md              # Tệp README
 ```
 # Các Phần Chính Của Dự Án
-- **Huấn luyện mô hình:** Mô hình học sâu được xây dựng và huấn luyện bằng TensorFlow. Dữ liệu hình ảnh được tiền xử lý trước khi đưa vào mô hình.
-- **Triển khai Streamlit:** Giao diện người dùng được tạo bằng Streamlit cho phép người dùng dễ dàng tải lên hình ảnh và nhận kết quả phân loại.
 - **Tiền xử lý dữ liệu:** Dữ liệu được tiền xử lý bao gồm việc thay đổi kích thước ảnh và chuẩn hóa hình ảnh.
+- **Huấn luyện mô hình:** Mô hình học sâu được xây dựng và huấn luyện bằng TensorFlow. Dữ liệu hình ảnh được tiền xử lý trước khi đưa vào mô hình.
+- **Xây dựng API với FastAPI:** FastAPI được sử dụng để tạo một API, cho phép mô hình được sử dụng từ các ứng dụng khác hoặc qua HTTP requests.
+- **Triển khai Streamlit:** Giao diện người dùng được tạo bằng Streamlit cho phép người dùng dễ dàng tải lên hình ảnh và nhận kết quả phân loại.
 
 # Đánh Giá Mô Hình
 - **Độ chính xác trên tập huấn luyện:** 95%
