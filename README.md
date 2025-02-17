@@ -92,6 +92,10 @@ streamlit run app.py
 # Đánh Giá Mô Hình
 - **Độ chính xác trên tập huấn luyện:** 95%
 - **Độ chính xác trên tập kiểm thử:** 93%
+# Thư mục chứa mô hình
+```bash
+https://drive.google.com/drive/folders/1nD02S5aihGwY2PrykKn4SZDv_GRHGzxf?usp=sharing
+```
 # Các Vấn Đề
 ### **Vấn Đề 1: Hiệu suất mô hình chưa đạt yêu cầu**
 - Mô hình có độ chính xác chưa cao đối với một số hình ảnh có độ phân giải thấp.
