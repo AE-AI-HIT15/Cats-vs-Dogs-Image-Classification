@@ -2,10 +2,14 @@
 
 ## 🔎 Danh Mục
 
-- [Giới Thiệu](#giới-thiệu)
-- [Chức năng](#chức-năng-chính)
-- [Tổng quan hệ thống](#tổng-quan-hệ-thống)
-- [Hướng dẫn cài đặt](#hướng-dẫn-cài-đặt)
+- [📝 Giới Thiệu](#📝-giới-thiệu)
+- [⚙️ Chức Năng Chính](#⚙️-chức-năng-chính)
+- [👩‍💻 Tổng quan hệ thống](#👩‍💻-tổng-quan-hệ-thống)
+- [📊 Data Sử Dụng](#📊-data-sử-dụng)
+- [🛠️ Hướng dẫn cài đặt](#🛠️-hướng-dẫn-cài-đặt)
+- [🎯 Chạy Hệ Thống](#🎯-chạy-hệ-thống)
+- [📊 Đánh Giá Mô Hình](#📊-đánh-giá-mô-hình)
+- [⚠️ Các Vấn Đề](#⚠️-các-vấn-đề)
 
 ---
 
@@ -41,7 +45,7 @@ Hệ thống này bao gồm hai phần chính: Backend và Frontend.
 
 ---
 
-## Data sử dụng
+## 📊 Data sử dụng
 
 - [Data](https://drive.google.com/file/d/1y0ce7a_nTuxLxsC7GCfZMYpAxeSejIiQ/view?usp=drive_link)
 
@@ -119,7 +123,7 @@ pip install -r requirements.txt
 
 - Tải mô hình tại [Here](https://drive.google.com/drive/folders/1nD02S5aihGwY2PrykKn4SZDv_GRHGzxf).
 
-### 🎯 Chạy hệ thống
+## 🎯 Chạy hệ thống
 
 Để chạy API với FastAPI, sử dụng lệnh sau:
 
@@ -143,14 +147,14 @@ Sau khi tải lên hình ảnh của một con chó hoặc mèo, mô hình sẽ 
 
 - Prediction: Dog
 - Confidence: 95.25%
-- Nếu độ tin cậy dưới 90%, hệ thống sẽ yêu cầu bạn thử tải lên hình ảnh khác.
+- Nếu độ tin cậy dưới 90%, hệ thống sẽ 
 
-## Đánh Giá Mô Hình
+## 📊 Đánh Giá Mô Hình
 
 - *Độ chính xác trên tập huấn luyện*: 95%
 - *Độ chính xác trên tập kiểm thử*: 93%
 
-## Các Vấn Đề
+## ⚠️ Các Vấn Đề
 
 ### Vấn Đề 1: Hiệu suất mô hình chưa đạt yêu cầu
 
