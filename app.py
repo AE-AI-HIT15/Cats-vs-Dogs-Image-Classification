@@ -1,45 +1,37 @@
 import streamlit as st
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing import image
-import numpy as np
 from PIL import Image
+import tensorflow as tf
+import numpy as np
 
-model = load_model('D:/Demo_Cat-Dog/cat_dog_model.h5')
+# Load the pre-trained model
+model = tf.keras.models.load_model('models\cat_dog_model.h5')
 
+# Define a function to classify the image
+def classify_image(image):
+    image = image.resize((150, 150))
+    image = np.array(image) / 255.0
+    image = np.expand_dims(image, axis=0)
+    prediction = model.predict(image)
+    return prediction
 
-def prepare_image(img):
-    img = img.resize((150, 150)) 
-    img_array = np.array(img) / 255.0 
-    img_array = np.expand_dims(img_array, axis=0)  
-    return img_array
+# Streamlit app
+st.title("Cat vs Dog Image Classification")
 
-
-st.title("Cat vs Dog Image Classifier")
-
-
-st.write("Upload an image of a cat or dog to predict the class.")
-
-
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 
 if uploaded_file is not None:
+    image = Image.open(uploaded_file)
+    st.image(image, caption='Uploaded Image.')
+    st.write("")
+    
 
-    img = Image.open(uploaded_file)
-    
-    st.image(img, caption="Uploaded Image", use_column_width=True)
+    prediction = classify_image(image)
+    confidence = max(prediction[0])
 
-    img_array = prepare_image(img)
-    
-    result = model.predict(img_array)
-    
-    predicted_class = np.argmax(result, axis=1)[0]
-    classes = ['cat', 'dog']  
-    predicted_label = classes[predicted_class]
-    
-    confidence = result[0][predicted_class] * 100 
-
-    if confidence >= 90:
-        st.write(f"Prediction: {predicted_label}")
-        st.write(f"Confidence: {confidence:.2f}%")
+    if confidence < 0.9:
+        st.write("Could not identify the image with sufficient confidence.")
     else:
-        st.write(f"Prediction confidence is too low: {confidence:.2f}%. Try another image.")
+        if np.argmax(prediction) == 0:
+            st.write(f"This is a Cat with {confidence * 100:.2f}% confidence.")
+        else:
+            st.write(f"This is a Dog with {confidence * 100:.2f}% confidence.")
