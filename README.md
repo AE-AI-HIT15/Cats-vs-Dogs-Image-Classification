@@ -63,10 +63,10 @@ Hệ thống này bao gồm hai phần chính: Backend và Frontend.
 ### 🔨 Cài Đặt
 
 1. Clone dự án về máy tính của bạn:
-
+```
 git clone https://github.com/AE-AI-HIT15/Cats-vs-Dogs-Image-Classification.git
 cd Cats-vs-Dogs-Image-Classification
-
+```
 - Cấu trúc thư mục:
 
 ```
