@@ -69,17 +69,15 @@ streamlit run app.py
 │   ├──  cat_dog_model_1.0.0.h5
 │   ├──  cat_dog_model_1.1.0.h5
 ├── model_train_data/      # Mã nguồn của dự án
-│   ├── data_preprocessing.py
-│   ├── model_building.py
-│   ├── training.py
-│   ├── evaluation.py
-│   ├── visualization.py
-│   ├──main.py
+│   ├── data_preprocessing.py #  tiền xử lý dữ liệu
+│   ├── model_building.py # xây dựng mô hình
+│   ├── training.py # huấn luyện mô hình
+│   ├── evaluation.py # đánh giá mô hình
+│   ├── visualization.py #  vẽ biểu đồ Accuracy và Loss
+│   ├──train.py # hàm sử dụng các hàm đã trên <train_model>
 ├── organize_train_data.py # tiền xử lý ảnh
-├── app.py/     # Thư mục FastAPI
-│   ├──  main_app.py    # Mã nguồn FastAPI
-├── streamlit_app/         # Thư mục Streamlit
-│   └── app.py             # Mã nguồn Streamlit
+├── main_app.py    # Mã nguồn FastAPI
+├──  app.py             # Mã nguồn Streamlit
 ├── requirements.txt       # Các thư viện yêu cầu
 ├── .gitignore             # Các thư mục không up lên github
 └── README.md              # Tệp README
