@@ -69,7 +69,7 @@ cd Cats-vs-Dogs-Image-Classification
 
 - Cấu trúc thư mục:
 
-plaintext
+```
 ├── data/              
 │   ├── train/
 │   │   ├── cats/
@@ -107,7 +107,7 @@ plaintext
 ├── requirements.txt       # Các thư viện yêu cầu
 ├── .gitignore             # Các thư mục không up lên github
 └── README.md              # Tệp README
-
+```
 2. Cài đặt các thư viện cần thiết:
 
 - Sử dụng requirements.txt để cài đặt tất cả các thư viện cần thiết.
