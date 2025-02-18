@@ -138,7 +138,7 @@ Sau khi tải lên hình ảnh của một con chó hoặc mèo, mô hình sẽ 
 
 - Prediction: Dog
 - Confidence: 95.25%
-- Nếu độ tin cậy dưới 90%, hệ thống sẽ 
+- Nếu độ tin cậy dưới 90%, hệ thống sẽ yêu cầu thử 1 ảnh khác
 
 ## 📊 Đánh Giá Mô Hình
 
