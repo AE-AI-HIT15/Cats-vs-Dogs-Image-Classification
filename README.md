@@ -111,9 +111,9 @@ cd Cats-vs-Dogs-Image-Classification
 2. Cài đặt các thư viện cần thiết:
 
 - Sử dụng requirements.txt để cài đặt tất cả các thư viện cần thiết.
-
+```
 pip install -r requirements.txt
-
+```
 3. Tải mô hình đã được huấn luyện:
 
 - Tải mô hình tại [Here](https://drive.google.com/drive/folders/1nD02S5aihGwY2PrykKn4SZDv_GRHGzxf).
@@ -121,15 +121,15 @@ pip install -r requirements.txt
 ## 🎯 Chạy hệ thống
 
 Để chạy API với FastAPI, sử dụng lệnh sau:
-
+```
 uvicorn fastapi.py:app --reload
-
+```
 Hệ thống sẽ chạy tại địa chỉ: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 Để chạy giao diện người dùng Streamlit, sử dụng lệnh sau:
-
+```
 streamlit run app.py
-
+```
 Hệ thống sẽ mở một cửa sổ trình duyệt tại [http://localhost:8501](http://localhost:8501).
 
 ### 🎉 Kết quả
