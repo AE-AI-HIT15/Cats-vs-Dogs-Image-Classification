@@ -4,7 +4,7 @@ import tensorflow as tf
 import numpy as np
 
 # Load the pre-trained model
-model = tf.keras.models.load_model('models\cat_dog_model.h5')
+model = tf.keras.models.load_model('models/1.0.0.h5')
 
 # Define a function to classify the image
 def classify_image(image):
