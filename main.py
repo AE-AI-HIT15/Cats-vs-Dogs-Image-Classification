@@ -6,7 +6,7 @@ from PIL import Image
 
 app = FastAPI()
 
-model = load_model('models/cat_dog_model.h5')  
+model = load_model('models/1.0.0.h5')  
 
 
 def prepare_image(img_bytes):

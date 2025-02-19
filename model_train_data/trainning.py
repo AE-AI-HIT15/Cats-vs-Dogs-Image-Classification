@@ -1,29 +1,30 @@
+from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping
 
-from data_preprocessing import prepare_data
-from model_building import build_model
-from training import train_model
-from evaluation import evaluate_model
-from visualization import plot_results
+def train_model(model, train_generator, val_generator, epochs=30):
+    # Callback
+    learning_rate_reduction = ReduceLROnPlateau(monitor='val_accuracy',
+                                                 patience=2,
+                                                 factor=0.5,
+                                                 min_lr=0.00001,
+                                                 verbose=1)
 
+    early_stopping = EarlyStopping(monitor='val_loss', 
+                                   patience=3, 
+                                   restore_best_weights=True, 
+                                   verbose=1)
 
-image_size = 150
-image_channel = 3
-batch_size = 32
+    # Biên dịch mô hình
+    model.compile(optimizer='adam', 
+                  loss='categorical_crossentropy', 
+                  metrics=['accuracy'])
 
+    # Huấn luyện mô hình
+    history = model.fit(
+        train_generator,
+        validation_data=val_generator,
+        epochs=epochs,
+        callbacks=[early_stopping, learning_rate_reduction]
+    )
 
-train_generator, val_generator = prepare_data(image_size, batch_size)
+    return model, history
 
-
-model = build_model(image_size, image_channel)
-
-
-model, history = train_model(model, train_generator, val_generator)
-
-
-evaluate_model(model, train_generator, val_generator)
-
-
-plot_results(history)
-
-
-model.save('cat_dog_model.h5')
